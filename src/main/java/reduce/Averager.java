@@ -29,7 +29,7 @@ public class Averager {
     long start = System.nanoTime();
 
     Average result = ThreadLocalRandom.current()
-        .doubles(1_000_000, -Math.PI, +Math.PI)
+        .doubles(2_000_000_000, -Math.PI, +Math.PI)
         .parallel()
         .boxed()
         .reduce(
